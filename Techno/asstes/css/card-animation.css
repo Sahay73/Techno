@@ -1,0 +1,145 @@
+/* flip-card-animation */
+.flip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: -220px;
+  }
+  
+  .flip-box {
+    width: 30%;
+    height: 220px;
+    perspective: 1000px;
+  }
+  
+  .flip-card {
+    width: var(--w-full);
+    height: var(--h-full);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  
+  .front-card,
+  .back-card {
+    text-align: center;
+    width: var(--w-full);
+    height: var(--h-full);
+    border-radius: var(--br-radius-sm);
+    backface-visibility: hidden;
+  }
+  
+  .front-card {
+    transform: rotateY(0deg);
+    color: var(--c-white);
+    background-color: var(--c-primary);
+  }
+  
+  .back-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background-color: var(--c-white);
+    box-shadow: 0 0 25px 15px var(--c-shadow-gray);
+  }
+  
+  .flip-box:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card .card-icon {
+    padding-top: 24px;
+  }
+  
+  .flip-card .back-card .card-title {
+    padding-top: 10px;
+  }
+  
+  .flip-card .back-card .card-description {
+    margin-bottom: 10px;
+  }
+  
+  .flip-card .card-title {
+    margin-bottom: 10px;
+  }
+  /* /// flip-card-animation /// */
+
+  /* card-hover-anim */
+  .section-feature {
+    padding-block: 100px;
+  }
+  
+  .slide {
+    width: 383px;
+  }
+  
+  .slide-img {
+    width: var(--w-full);
+    display: block;
+    transition: var(--slow-trans);
+  }
+  
+  .slide-item {
+    position: relative;
+  }
+  
+  .slide-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: var(--w-full);
+    height: var(--h-full);
+    transition: var(--slow-trans);
+    background-color: var(--c-light-blue);
+    opacity: 0;
+    z-index: 10;
+  }
+.slide-content {
+    position: absolute;
+    width: 80%;
+    top: 70%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px 10px;
+    text-align: center;
+    transform: translateY(-50%);
+    transition: var(--slow-trans);
+    background-color: var(--c-white);
+    border-radius: var(--br-radius-sm);
+    z-index: 10;
+    opacity: 0;
+  }
+
+  .slide:hover .slide-content {
+    top: 50%;
+    opacity: 1;
+  }
+
+  .slide-title {
+    color: inherit;
+    display: inline-block;
+    font-family: var(--font-sBold);
+    margin-bottom: 10px;
+  }
+
+  .slide:hover .slide-item::before {
+    opacity: 1;
+  }
+  
+  .slide:hover .slide-content {
+    top: 50%;
+    opacity: 1;
+  }
+  
+  .image-container {
+    overflow: hidden;
+  }
+  
+  .slide:hover .slide-img {
+    transform: scale(1.01);
+  }
+
+ /* /// card-hover-anim /// */

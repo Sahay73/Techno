@@ -1,0 +1,36 @@
+/* home-section */
+.heading-primary{
+    color: var(--c-white);
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.heading-secondary {
+    font-family: var(--font-exBold);
+    line-height: 1;
+}
+
+.hero-description{
+    font-size: 20px;
+    color: var(--c-white);
+}
+/* /// home-section /// */ 
+
+/* About-section */
+.secondary-heading{
+    font-family: var(--font-exBold);
+    line-height: 1;
+}
+
+.about-section :where(.primary-heading , .highlight-text){
+    color: var(--c-primary);
+}
+:where(.heading-tertiary , .highlight-text) {
+    color: var(--c-primary);
+}
+.about-description {
+    font-size: 18px;
+    padding-top: 24px;
+    margin-bottom: 40px;
+}
+/* /// About-section /// */
+
